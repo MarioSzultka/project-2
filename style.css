@@ -1,0 +1,34 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+header {
+
+  position: relative;
+  min-height: 100vh;
+}
+
+h1 {
+
+  position: absolute;
+  z-index: 2;
+  color: white;
+  top: 10%;
+  right: 20%;
+  font-size: 5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  position: absolute;
+  display: block;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
