@@ -5,14 +5,15 @@ import './index.css'
 import balony from './balloons.jpg'
 import pszczoly from './bee.jpg'
 
-const imageChange = () => console.log("mmm")
-
 
 const App = () => {
 
+  const text = true;
+  const image = true;
+
   return (
 
-    <header onClick={imageChange}>
+    <header onClick={() => text = !text, console.log(text)}>
       <h1>Balony</h1>
       <img src={balony} alt="" />
     </header>
