@@ -1,27 +1,53 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 
 import balony from './balloons.jpg'
 import pszczoly from './bee.jpg'
 
+const data = [
 
-const App = () => {
+  {
+    name: "Pszczoly",
+    image: pszczoly
+  },
+  {
+    name: "Balony",
+    image: balony
+  }
+]
 
-  const text = true;
-  const image = true;
 
-  return (
+export class App extends Component {
 
-    <header onClick={() => text = !text, console.log(text)}>
-      <h1>Balony</h1>
-      <img src={balony} alt="" />
-    </header>
+  state = {
 
-  )
+    text: true,
+    image: true
 
+  }
+
+  render() {
+
+    return (
+
+      <header onClick={() => {
+
+        this.setState({
+          text: !this.state.text,
+          image: !this.state.image
+
+        })
+
+      }}>
+        <h1>{this.state.text ? "Balony" : "Pszczoly"}</h1>
+        <img src={this.state.image ? balony : pszczoly} alt="fotka" />
+      </header>
+
+    )
+  }
 
 }
 
 
-ReactDOM.render(<App />, document.getElementById("root"))
+ReactDOM.render(< App />, document.getElementById("root"))
