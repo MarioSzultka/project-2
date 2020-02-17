@@ -15,11 +15,11 @@ const data = [
   }
 ]
 
-const Content = ({ stateText, stateImage, name, image }) => (
+const Content = (props) => (
 
   <>
-    <h1>{name}</h1>
-    <img src={image} alt="fotka" />
+    <h1>{props.text ? props.data[0].name : props.data[1].name}</h1>
+    <img src={props.text ? props.data[0].image : props.data[1].image} alt="fotka" />
   </>
 
 )
@@ -48,7 +48,8 @@ export class App extends Component {
 
       }}>
 
-        {data.map(item => <Content stateText={this.state.text} stateImage={this.state.image} {...item} />)}
+
+        <Content text={this.state.text} data={[...data]} />
 
       </header>
 
