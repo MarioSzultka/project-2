@@ -30,7 +30,6 @@ export class App extends Component {
   state = {
 
     text: true,
-    image: true
 
   }
 
