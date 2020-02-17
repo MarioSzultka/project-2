@@ -6,7 +6,7 @@ import pszczoly from './bee.jpg'
 const data = [
 
   {
-    name: "Pszczoly",
+    name: "Pszczolly",
     image: pszczoly
   },
   {
